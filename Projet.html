@@ -1,19 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Formulaire d'inscription</title>
-        <link rel="canonical" href="file:///Users/thomas/Documents/Stage/Entrainement%201.html">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script>
-            src="https://code.jquery.com/jquery-3.4.1.slim.js"
-            integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-            crossorigin="anonymous"
-        </script>
-        <script src="Script.js"></script>
+<head>
+    <meta charset="utf-8">
+    <title>Questionnaire sélection</title>
+    <link rel="canonical" href="file:///Users/thomas/Documents/Stage/Entrainement%201.html">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Questionnaire</h1>
 
-    </head>
-    <body>
-       <p>Ceci est un test</p>
+        <p class="intro">Ceci est un questionnaire permettant d'affiner vois choix et d"en savoir plus sur vous <br>
+        Cliquez sur le bouton afin de démarrer le questionnaire.</p>
+        <button id="but1" class="intro">Démarrez le questionnaire</button>
+
+        <form method="post" action="">
+
+            <fieldset id="partie1">
+                <legend>Création du compte</legend>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Adresse mail</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Mot de passe</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button id="but2">Confirmer votre inscription</button>
+            </fieldset>
+
+
+            <fieldset id="partie2">
+                <legend>Informations personnels</legend>
+                <div class="form-row">
+                    <div class="form-group col">
+                      <input type="text" class="form-control" placeholder="Nom" required>
+                    </div>
+                    <div class="form-group col">
+                      <input type="text" class="form-control" placeholder="Prénom" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Sexe : </label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Homme</option>
+                        <option>Femme</option>
+                        <option>Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date de naissance : </label>
+                    <input type="date" name="date_born" class="form-control">
+                </div>
+                <button id="but3">Valider</button>
+
+            </fieldset>
+        </form>
+    </div>
+    
+    <script   src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
+    <script src="Script.js"></script>
     </body>
 </html>
